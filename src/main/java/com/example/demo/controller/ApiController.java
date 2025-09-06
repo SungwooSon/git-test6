@@ -16,7 +16,8 @@ public class ApiController {
 
     @PostMapping("/hello/{id}")
     public String hello(@PathVariable String id) {
-        return "Hello " + id;
+        String a = "1";
+        return "Hello " + id + a;
     }
 
     @PatchMapping("/hello/{id}")
