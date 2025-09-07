@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ApiController {
@@ -11,4 +10,19 @@ public class ApiController {
         return "Hello World";
     }
 
+    @PostMapping("/hello/{id}")
+    public String hello(@PathVariable String id) {
+        String a = "4";
+        return "Hello " + id + a;
+    }
+
+    @PatchMapping("/hello/{id}")
+    public String patch(@PathVariable Integer id) {
+        return "Hello World";
+    }
+
+    @DeleteMapping("/hello/{id}")
+    public String delete(@PathVariable Integer id) {
+        return "delete";
+    }
 }
